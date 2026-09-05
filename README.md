@@ -2,7 +2,9 @@
   这个 README 会直接显示在 https://github.com/yxyyds666 首页。
   · 项目卡片是 scripts/gen_cards.py 画的（github-readme-stats 公共实例已 DEPLOYMENT_PAUSED，
     pin 卡片拿不到了），改文案只要编辑 scripts/cards.json 再跑一次脚本；
-  · .github/workflows/refresh-cards.yml 每天会自动刷新一次 star / 语言数据。
+  · 贡献 3D 图在 profile-3d-contrib/，由 github-profile-3d-contrib 生成
+    （github-readme-activity-graph 已 402 停用）；
+  · .github/workflows/refresh-cards.yml 每天自动刷新以上两者。
 -->
 
 <p align="center">
@@ -19,7 +21,11 @@
 ### Contribution History | 贡献历史
 
 <p align="center">
-  <img width="98%" src="https://ghchart.rshah.org/7aa2f7/yxyyds666" alt="贡献热力图" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yxyyds666/yxyyds666/main/profile-3d-contrib/profile-night-view.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yxyyds666/yxyyds666/main/profile-3d-contrib/profile-season.svg" />
+    <img width="92%" src="https://raw.githubusercontent.com/yxyyds666/yxyyds666/main/profile-3d-contrib/profile-night-view.svg" alt="3D 贡献图" />
+  </picture>
 </p>
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=yxyyds666&theme=tokyonight&hide_border=true&border_radius=8&locale=zh_Hans&date_format=Y.n.j&disable_animations=true" alt="连续提交" />
