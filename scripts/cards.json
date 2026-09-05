@@ -1,0 +1,22 @@
+{
+  "owner": "yxyyds666",
+  "outDir": "assets/cards",
+  "cards": [
+    {
+      "repo": "Yu-flash-tools-for-Mac",
+      "blurb": "羽工具箱 — macOS 上的 Android 刷机调试工具箱，ADB 一站式操作、内置 scrcpy 投屏与 Fastboot。"
+    },
+    {
+      "repo": "TB331FC-Kernel",
+      "blurb": "小新 Pad 2024 定制内核：GKI 5.15.167 + KernelSU + SusFS，Actions 云编译，单 Release 三变体。"
+    },
+    {
+      "repo": "Windows-Activate-for-macOS",
+      "blurb": "把「激活 Windows」水印搬到 macOS 右下角：始终置顶、鼠标穿透，还带一页假的卡密激活。"
+    },
+    {
+      "repo": "Windows-registry-for-macOS",
+      "blurb": "用注册表编辑器的方式改 macOS 配置：dotfiles、defaults 域、~/.config、LaunchAgents 挂成一棵树。"
+    }
+  ]
+}

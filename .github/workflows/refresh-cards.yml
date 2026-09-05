@@ -1,0 +1,37 @@
+name: Refresh project cards
+
+on:
+  schedule:
+    - cron: "17 20 * * *" # 每天 04:17 (UTC+8) 刷新一次 star / 语言数据
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/cards.json
+      - scripts/gen_cards.py
+      - .github/workflows/refresh-cards.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen_cards.py
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain assets/cards)" ]; then
+            echo "cards unchanged, nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cards
+          git commit -m "chore: refresh project cards"
+          git push
