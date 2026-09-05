@@ -22,7 +22,7 @@
   <img width="98%" src="https://ghchart.rshah.org/7aa2f7/yxyyds666" alt="贡献热力图" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=yxyyds666&theme=tokyonight&hide_border=true&border_radius=8&locale=zh_Hans&date_format=Y.n.j" alt="连续提交" />
+  <img src="https://streak-stats.demolab.com?user=yxyyds666&theme=tokyonight&hide_border=true&border_radius=8&locale=zh_Hans&date_format=Y.n.j&disable_animations=true" alt="连续提交" />
 </p>
 
 ### Stats | 统计信息
@@ -41,13 +41,17 @@
 
 ### Tech Stacks | 技术栈
 
-#### Currently | 目前在用的
+#### Languages | 语言
 
-<img src="https://skillicons.dev/icons?i=swift,apple,py,c,bash,linux,git,docker,vscode,androidstudio,cloudflare,md" alt="目前在用的" />
+<img src="https://skillicons.dev/icons?i=swift,c,cpp" alt="Swift, C, C++" />
 
-#### Previously | 曾经玩过的
+#### Platforms | 平台与系统
 
-<img src="https://skillicons.dev/icons?i=cpp,java,kotlin,js,ts,vue,nodejs,mysql,nginx,ubuntu,windows,githubactions" alt="曾经玩过的" />
+<img src="https://skillicons.dev/icons?i=apple,linux,ubuntu,windows,androidstudio" alt="macOS, Linux, Ubuntu, Windows, Android Studio" />
+
+#### Tools & Infra | 工具链与服务
+
+<img src="https://skillicons.dev/icons?i=git,githubactions,bash,docker,vscode,cloudflare,nginx,mysql" alt="Git, GitHub Actions, Bash, Docker, VS Code, Cloudflare, Nginx, MySQL" />
 
 #### Reverse Engineering | 逆向那一套 🔍
 

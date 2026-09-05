@@ -1,8 +1,8 @@
-name: Refresh project cards
+name: Refresh profile assets
 
 on:
   schedule:
-    - cron: "17 20 * * *" # 每天 04:17 (UTC+8) 刷新一次 star / 语言数据
+    - cron: "17 20 * * *" # 每天 04:17 (UTC+8) 刷新一次
   workflow_dispatch:
   push:
     paths:
@@ -19,19 +19,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Regenerate cards
+      # 项目卡片：github-readme-stats 的公共实例已停用，自己画
+      - name: Regenerate project cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/gen_cards.py
 
+      # 贡献 3D 图：github-readme-activity-graph 也挂了（402），改成自己生成
+      - name: Generate 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
       - name: Commit if changed
         run: |
-          if [ -z "$(git status --porcelain assets/cards)" ]; then
-            echo "cards unchanged, nothing to commit"
+          if [ -z "$(git status --porcelain assets/cards profile-3d-contrib)" ]; then
+            echo "assets unchanged, nothing to commit"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/cards
-          git commit -m "chore: refresh project cards"
+          git add assets/cards profile-3d-contrib
+          git commit -m "chore: refresh profile assets"
           git push
